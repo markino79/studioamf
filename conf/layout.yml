@@ -1,6 +1,13 @@
 layout:
   home_index:
     root: layouts/1columns-left.tpl
+    left:
+      block1:
+        type: base
+        template: left_1.tpl
+      block2:
+        type: base
+        template: left_2.tpl
     content:
       block1:
         type: base

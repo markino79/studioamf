@@ -1,5 +1,3 @@
 <div class="hero-unit">
-	<h1>home.tpl</h1>
+	<h3>left_2.tpl</h3>
 </div>
-
-
