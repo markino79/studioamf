@@ -1,0 +1,40 @@
+@import "variables.less";
+@import "mixins.less";
+
+body {
+	padding-top: 60px;
+}
+
+.selection(@color, @background) {
+	&::-moz-selection { color: @color; background-color: @background; }
+	&::-webkit-selection { color: @color; background-color: @background; }
+	&::selection { color: @color; background-color: @background; }
+}
+
+a, i, b, em, strong, div, span, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, abbr, blockquote, address, small, cite, pre, article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, td, th {
+	.selection(white, rgba(255,139,0,.8));
+}
+
+.footer {
+	text-align: center;
+	padding: 30px 0;
+	margin-top: 70px;
+	border-top: 1px solid darken(@wellBackground, 7%);
+	background: @wellBackground;
+	
+	p {
+		margin-bottom: 0;
+		color: #777;
+	}
+}
+
+.mask {
+	position: absolute;
+	opacity: .9;
+	z-index: 999;
+	background: @white;
+}
+
+#html5logo {
+	margin-left: -165px;
+}

@@ -1,0 +1,2 @@
+#!/bin/sh
+phpdoc -d vendor/artera/amf/lib/Amf -t public/apidocs --title "AMF API documentation" -p

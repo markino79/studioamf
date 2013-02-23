@@ -1,0 +1,49 @@
+@import "variables.less";
+@import "mixins.less";
+
+.border-top-radius(@radius: 5px) {
+  -webkit-border-top-right-radius: @radius;
+   -webkit-border-top-left-radius: @radius;
+      -moz-border-radius-topright: @radius;
+       -moz-border-radius-topleft: @radius;
+           border-top-rightradius: @radius;
+            border-top-leftradius: @radius;
+}
+
+section {
+	a.anchor {
+		display: block;
+		margin-top: -40px;
+		padding-top: 40px;
+	}
+}
+
+.code {
+	background-color: #7A6652;
+	.border-radius(4px);
+	margin-bottom: .5em;
+	border: 1px solid #4D4033;
+	
+	h5 {
+		color: @white;
+		text-shadow: 1px 2px 2px @black;
+		padding: 3px 6px 0;
+		margin: 0;
+	}
+	
+	pre {
+		background-color: #4D4033;
+		color: @white;
+		padding: .5em;
+		margin: 0;
+		overflow: auto;	
+		border: .3em solid hsl(30,20%,40%);
+		border-radius: .5em;
+		box-shadow: 1px 1px .5em black inset;
+		text-shadow: 0 -.1em .2em black;
+	}
+}
+
+pre.asciitree {
+	line-height: 12px;
+}

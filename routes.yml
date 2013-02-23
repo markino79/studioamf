@@ -1,0 +1,20 @@
+namespace: Controllers
+routes:
+  /{controller:docs}/{page:.*}.html:
+  /{controller}/{action}:
+  /{controller}:
+  /:
+
+  @400:
+    controller: Errors
+    action: bad_request
+  @403:
+    controller: Errors
+    action: forbidden
+  @404:
+    controller: Errors
+    action: not_found
+  @500:
+    controller: Errors
+    action: internal_server_error
+ 

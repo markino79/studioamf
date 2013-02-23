@@ -1,0 +1,3 @@
+# debug: true
+# plugins:
+#   console: Amf\Console\Console

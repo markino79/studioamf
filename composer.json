@@ -1,0 +1,27 @@
+{
+	"config": {
+		"bin-dir": "bin"
+	},
+	"include-path": ["lib/"],
+	"autoload": {
+		"psr-0": {
+			"": "lib/",
+			"Controllers\\": "./",
+			"Partials\\": "./"
+		}
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "git@gitorious.artera.it:amf/library.git"
+		}
+	],
+	"require": {
+        "artera/amf": "dev-master",
+		"leafo/lessphp": "*",
+		"smarty/smarty": "3.1.*",
+		"kriswallsmith/assetic": "1.1.0-alpha2",
+		"phpspec/php-diff": "dev-master",
+		"bes/css-reducer": "dev-master"
+	}
+}

@@ -1,0 +1,8 @@
+#!/bin/sh
+BASEDIR="$(dirname "$(dirname "$(readlink -fn "$0")")")"
+mkdir -p "$BASEDIR/vendor"
+COMPOSER="$BASEDIR/vendor/composer.phar"
+
+[ -f "$COMPOSER" ] || wget http://getcomposer.org/composer.phar -O "$COMPOSER"
+
+php "$COMPOSER" "$@"

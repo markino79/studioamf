@@ -1,0 +1,59 @@
+name: AMF
+version: 0.4
+timezone: Europe/Rome
+locale:
+  name: en-US
+session:
+  autostart: false
+mail:
+  from:
+    email: massimilianotorromeo@artera.it
+    name: AMF
+  transport:
+    type: smtp
+    host: mail.artera.it
+    auth: login
+    username: xxx
+    password: xxx
+plugins:
+  errorhandler:
+    class: Amf\ErrorHandler\Standard
+  template: Amf\Template\Smarty
+  smarty_markdown: Amf\Template\Smarty\Markdown
+  smarty_partial: Amf\Template\Smarty\Partial
+  
+  main.css:
+    class: Amf\Assetic
+    route: /{name:main\.css}
+    content_type: text/css
+    expires: 604800
+    directory: BASEDIR/stylesheets
+    inputs: [bootstrap.less, dialogs.less, main.less]
+    filters: [Lessphp, \CssReducerFilter]
+  
+  docs.css:
+    class: Amf\Assetic
+    content_type: text/css
+    expires: 604800
+    route: /{name:docs\.css}
+    directory: BASEDIR/stylesheets
+    inputs: [docs.less, prism.css]
+    filters: [Lessphp, \CssReducerFilter]
+    
+  main.js:
+    class: Amf\Assetic
+    content_type: text/javascript
+    expires: 604800
+    route: /{name:main\.js}
+    directory: BASEDIR/javascript
+    inputs: [mootools-bootstrap.js, powertools-1.1.1.js, mootools-extensions.js, dialogs.js, common.js]
+    filters: [JSMin]
+    
+  prism.js:
+    class: Amf\Assetic
+    content_type: text/javascript
+    expires: 604800
+    route: /{name:prism\.js}
+    directory: BASEDIR/javascript
+    inputs: [prism.js]
+    filters: [JSMin]

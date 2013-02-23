@@ -1,0 +1,7 @@
+layout:
+  home_index:
+    root: layouts/1columns-left.tpl
+    content:
+      block1:
+        type: base
+        template: home.tpl
